@@ -1,0 +1,4 @@
+# Dependências do projeto PMRV-4em1
+pyproj>=3.4.0      # Transformação de projeções (UTM <-> WGS84)
+pyshp>=2.3.0       # Leitura de arquivos Shapefile (.shp)
+Pillow>=9.0.0      # Processamento de imagens (remove_bg.py)

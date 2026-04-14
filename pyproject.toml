@@ -1,0 +1,27 @@
+[project]
+name = "pmrv-4em1"
+version = "1.0.0"
+description = "Wrapper Android para o app PMRv Operacional - Sistema de registro de danos veiculares"
+authors = [{ name = "Nei" }]
+requires-python = ">=3.8"
+dependencies = [
+    "pyproj>=3.4.0",     # Transformação de projeções (UTM <-> WGS84)
+    "pyshp>=2.3.0",      # Leitura de arquivos Shapefile
+    "Pillow>=9.0.0",     # Processamento de imagens
+]
+
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pylint]
+disable = [
+    "C0111",  # missing-docstring
+    "C0103",  # invalid-name
+]
+max-line-length = 120
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+include = '\.pyi?$'

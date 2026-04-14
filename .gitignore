@@ -1,0 +1,44 @@
+# Segurança
+Api.txt
+Api_Key.txt
+.env
+.env.local
+
+# Ambientes virtuais Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Cache do Aider
+.aider.tags.cache.v4/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Node.js
+node_modules/
+npm-debug.log*
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Capacitor
+android/
+.capacitor/
+
+# Temporários
+cleanup.py
+server.*.log
+

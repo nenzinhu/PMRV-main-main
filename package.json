@@ -1,0 +1,37 @@
+{
+  "name": "pmrv-4em1-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wrapper Android para o app PMRv Operacional - Sistema de registro de danos veiculares",
+  "scripts": {
+    "start": "http-server . -p 8000 -c-1",
+    "dev": "http-server . -p 8000 -c-1",
+    "serve": "http-server . -p 8000",
+    "lint": "eslint js/ --max-warnings=0",
+    "lint:fix": "eslint js/ --fix && prettier --write js/ css/",
+    "format": "prettier --write js/ css/ *.html *.json",
+    "refs:gfloripa": "python scripts/generate_grande_floripa_refs.py",
+    "prepare:web": "node scripts/copy-web-assets.mjs",
+    "cap:copy": "npm run prepare:web && npx cap copy",
+    "cap:sync": "npm run prepare:web && npx cap sync",
+    "cap:open:android": "npx cap open android",
+    "build:apk:debug": "npm run prepare:web && npx cap sync android",
+    "update:images": "python remove_bg.py . index.html",
+    "update:sw": "node scripts/generate-sw-manifest.mjs",
+    "cleanup": "python cleanup.py",
+    "install:python": "pip install -r requirements.txt"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.2.0",
+    "@capacitor/cli": "^8.2.0",
+    "@capacitor/core": "^8.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "http-server": "^14.1.0",
+    "prettier": "^3.0.3"
+  }
+}

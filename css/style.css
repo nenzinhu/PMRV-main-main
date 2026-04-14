@@ -1,0 +1,364 @@
+.topbar .nav-icon-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  padding: 10px; /* Aumentado para melhor área de toque */
+  cursor: pointer;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+}
+
+/* Estilos para Referências Próximas (TomTom) */
+.poi-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.poi-card:active {
+  transform: scale(0.98);
+}
+
+#ref_prox_categorias .btn {
+  margin-bottom: 4px;
+  font-size: 11px;
+  padding: 6px 10px;
+}
+
+#ref_prox_categorias .btn-outline {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.poi-card .btn-sm {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Croqui Icon Buttons */
+.croqui-icon-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 8px !important;
+  height: auto !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  transition: all 0.2s ease;
+}
+
+.croqui-icon-btn:active {
+  transform: scale(0.95);
+  background: rgba(255,255,255,0.05) !important;
+}
+
+.croqui-icon-btn img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: invert(1) brightness(2);
+}
+
+.croqui-icon-btn .icon-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.croqui-icon-btn .icon-emoji {
+  font-size: 24px;
+}
+
+/* Modal de Zoom Global */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.zoom-content {
+  position: relative;
+  max-width: 95vw;
+  max-height: 90vh;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#core-zoom-img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+.zoom-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+.dan-part-list-card {
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(245,130,32,0.08), rgba(255,255,255,0.02));
+}
+
+.dan-part-list-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.dan-part-list-title {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.dan-part-list-sub {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--label);
+}
+
+#dan-part-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.dan-part-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.dan-part-item-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: rgba(245,130,32,0.16);
+  color: #f58220;
+  font-weight: 900;
+}
+
+.dan-part-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.dan-part-item-name {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.dan-part-item-status {
+  font-size: 11px;
+  color: var(--label);
+}
+
+.dan-part-item-amassado {
+  border-color: #f97316;
+  box-shadow: inset 0 0 0 1px rgba(249,115,22,0.18);
+}
+
+.dan-part-item-riscado {
+  border-color: #a78bfa;
+  box-shadow: inset 0 0 0 1px rgba(167,139,250,0.18);
+}
+
+.dan-part-item-quebrado {
+  border-color: #ef4444;
+  box-shadow: inset 0 0 0 1px rgba(239,68,68,0.18);
+}
+
+.dan-part-item-trincado {
+  border-color: #38bdf8;
+  box-shadow: inset 0 0 0 1px rgba(56,189,248,0.18);
+}
+
+.dan-actions-inline {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.dan-point-group.move-mode {
+  filter: drop-shadow(0 0 8px rgba(245,130,32,0.28));
+}
+
+@media (max-width: 720px) {
+  #dan-part-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   ESTILOS PARA PES-VEHICLE (Pesos e Dimensões - Aba Imagens)
+   ============================================================ */
+
+.pes-vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.pes-vehicle-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.pes-vehicle-card:hover {
+  border-color: var(--primary);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.pes-vehicle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pes-vehicle-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.pes-vehicle-badge {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--primary);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pes-vehicle-image-wrapper {
+  margin-bottom: 12px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pes-vehicle-diagram {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.05), rgba(15, 23, 42, 0.5));
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.pes-vehicle-specs {
+  margin-bottom: 12px;
+  padding: 10px;
+  background: rgba(59, 130, 246, 0.05);
+  border-left: 3px solid var(--primary);
+  border-radius: 8px;
+}
+
+.pes-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.pes-spec-row:last-child {
+  margin-bottom: 0;
+}
+
+.pes-spec-label {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.pes-spec-row strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.pes-axle-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.pes-axle-table th,
+.pes-axle-table td {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .pes-vehicle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
